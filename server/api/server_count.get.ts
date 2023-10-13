@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
         }
     });
 
-    event.respondWith(new Response(JSON.stringify(bot.approximate_guild_count)));
+    event.respondWith(new Response(JSON.stringify({ approximate_guild_count: bot.approximate_guild_count})));
 });
 
 type Bot = {
